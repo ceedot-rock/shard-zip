@@ -1,7 +1,7 @@
 {
   "name": "shard-zip",
-  "version": "0.2.3",
-  "description": "Pure-JS Fibonacci + Blackjack V2 adaptive compressor for integer series and byte streams (full RT, CLI)",
+  "version": "0.2.4",
+  "description": "Omnipresent pure-JS compressor — Fibonacci self-sync + Blackjack V2 adaptive variants, K-division and raw fallback. Full compress/decompress for integer series and byte streams. CLI included.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -12,13 +12,20 @@
   },
   "keywords": [
     "compression",
+    "javascript",
+    "adaptive-compression",
     "fibonacci",
-    "blackjack",
-    "shard",
-    "integer-compression",
     "pure-js",
-    "slidphilabs",
-    "cli"
+    "integer-compression",
+    "byte-compression",
+    "shard-zip",
+    "lossless",
+    "cli",
+    "nodejs",
+    "blackjack",
+    "run-length",
+    "codec",
+    "slidphilabs"
   ],
   "author": "Corey Tasz + Meta AI",
   "license": "MIT",
@@ -30,7 +37,7 @@
     "type": "individual",
     "url": "https://buy.stripe.com/eVq9AUd7D0OY0CVdAQ6wE0a"
   },
-  "homepage": "https://github.com/ceedot-rock/shard-zip#readme",
+  "homepage": "https://slidphilabs.vercel.app",
   "bugs": {
     "url": "https://github.com/ceedot-rock/shard-zip/issues"
   },
