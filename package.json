@@ -1,6 +1,6 @@
 {
   "name": "shard-zip",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Omnipresent pure-JS compressor — Fibonacci self-sync + Blackjack V2 adaptive variants, K-division and raw fallback. Full compress/decompress for integer series and byte streams. CLI included.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,8 +26,8 @@
     "run-length",
     "codec"
   ],
-  "author": "Corey Tasz + Meta AI",
-  "license": "MIT",
+  "author": "Corey Tasz",
+  "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.4.0"
