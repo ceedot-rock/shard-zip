@@ -24,8 +24,7 @@
     "nodejs",
     "blackjack",
     "run-length",
-    "codec",
-    "slidphilabs"
+    "codec"
   ],
   "author": "Corey Tasz + Meta AI",
   "license": "MIT",
