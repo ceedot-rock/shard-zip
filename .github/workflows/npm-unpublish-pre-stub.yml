@@ -1,0 +1,22 @@
+name: npm unpublish pre-stub versions
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type UNPUBLISH to confirm'
+        required: true
+jobs:
+  unpublish:
+    if: github.event.inputs.confirm == 'UNPUBLISH'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Unpublish pre-stub versions (keep 0.3.0+ stub)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > ~/.npmrc
+          for v in 0.1.0 0.2.0 0.2.1 0.2.2 0.2.3 0.2.4 0.2.5; do
+            echo "Unpublish shard-zip@$v"
+            npm unpublish "shard-zip@$v" --force || true
+          done
+          npm view shard-zip versions --json || true
