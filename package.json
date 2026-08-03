@@ -1,15 +1,28 @@
 {
   "name": "shard-zip",
-  "version": "0.3.0",
-  "description": "STUB — proprietary SlidPhiLabs codec. Real package after purchase or Try Gate. https://slidphilabs.vercel.app/access",
+  "version": "0.3.1",
+  "description": "Slid Phi Labs \u2014 omnipresent pure-JS compressor. Fibonacci self-sync + Blackjack V2 adaptive variants, K-division and raw fallback. CLI included.",
   "type": "module",
   "main": "dist/index.js",
-  "exports": { ".": "./dist/index.js" },
-  "files": ["dist/index.js", "README.md", "LICENSE"],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist/index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "bin": {},
-  "keywords": ["slidphilabs", "proprietary", "stub"],
-  "author": "SlidPhiLabs",
+  "keywords": [
+    "slid phi labs",
+    "proprietary",
+    "stub"
+  ],
+  "author": "Slid Phi Labs",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://slidphilabs.vercel.app/access",
-  "repository": { "type": "git", "url": "git+https://github.com/ceedot-rock/shard-zip.git" }
+  "homepage": "https://slidphilabs.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceedot-rock/shard-zip.git"
+  }
 }

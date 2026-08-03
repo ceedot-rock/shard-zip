@@ -7,4 +7,4 @@
 1. [Try Gate](https://slidphilabs.vercel.app/try) or purchase
 2. [Access instructions](https://slidphilabs.vercel.app/access)
 
-© SlidPhiLabs · All rights reserved
+© Slid Phi Labs · All rights reserved
