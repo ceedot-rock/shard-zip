@@ -1,58 +1,15 @@
 {
   "name": "shard-zip",
-  "version": "0.2.5",
-  "description": "Omnipresent pure-JS compressor — Fibonacci self-sync + Blackjack V2 adaptive variants, K-division and raw fallback. Full compress/decompress for integer series and byte streams. CLI included.",
+  "version": "0.3.0",
+  "description": "STUB — proprietary SlidPhiLabs codec. Real package after purchase or Try Gate. https://slidphilabs.vercel.app/access",
+  "type": "module",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "bin": {
-    "shard-zip": "./dist/cli.js"
-  },
-  "scripts": {
-    "build": "tsc"
-  },
-  "keywords": [
-    "compression",
-    "javascript",
-    "adaptive-compression",
-    "fibonacci",
-    "pure-js",
-    "integer-compression",
-    "byte-compression",
-    "shard-zip",
-    "lossless",
-    "cli",
-    "nodejs",
-    "blackjack",
-    "run-length",
-    "codec"
-  ],
-  "author": "Corey Tasz",
+  "exports": { ".": "./dist/index.js" },
+  "files": ["dist/index.js", "README.md", "LICENSE"],
+  "bin": {},
+  "keywords": ["slidphilabs", "proprietary", "stub"],
+  "author": "SlidPhiLabs",
   "license": "SEE LICENSE IN LICENSE",
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.4.0"
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://buy.stripe.com/eVq9AUd7D0OY0CVdAQ6wE0a"
-  },
-  "homepage": "https://slidphilabs.vercel.app",
-  "bugs": {
-    "url": "https://github.com/ceedot-rock/shard-zip/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ceedot-rock/shard-zip.git"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "files": [
-    "dist",
-    "src",
-    "README.md",
-    "LICENSE",
-    "examples",
-    "package.json"
-  ]
+  "homepage": "https://slidphilabs.vercel.app/access",
+  "repository": { "type": "git", "url": "git+https://github.com/ceedot-rock/shard-zip.git" }
 }
