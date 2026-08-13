@@ -1,96 +1,66 @@
 {
   "name": "shard-zip",
-  "version": "0.3.6",
-  "description": "Slid Phi Labs — omnipresent pure-JS compressor. Fibonacci self-sync + Blackjack V2 adaptive variants, K-division and raw fallback. CLI included.",
-  "type": "module",
+  "version": "0.4.0",
+  "description": "Omnipresent pure-JS compressor \u2014 Fibonacci self-sync + Blackjack V2 adaptive variants, K-division, raw fallback. CLI. Open source.",
   "main": "dist/index.js",
-  "exports": {
-    ".": "./dist/index.js"
+  "types": "dist/index.d.ts",
+  "bin": {
+    "shard-zip": "./dist/cli.js"
   },
-  "files": [
-    "dist/index.js",
-    "README.md",
-    "LICENSE"
-  ],
-  "bin": {},
+  "scripts": {
+    "build": "tsc",
+    "test": "node -e \"import('./dist/index.js').then(()=>console.log('ok'))\""
+  },
   "keywords": [
-    "slid phi labs",
-    "proprietary",
-    "stub",
-    "x402",
-    "agentic-commerce",
-    "agent-commerce",
-    "agents.txt",
-    "llms.txt",
-    "solana",
-    "base",
-    "usdc",
-    "slid-phi-labs",
-    "spl-codec",
-    "cddg",
-    "agent-platform",
-    "cuni",
-    "agent-rider",
-    "quikgater"
+    "compression",
+    "javascript",
+    "adaptive-compression",
+    "fibonacci",
+    "pure-js",
+    "integer-compression",
+    "byte-compression",
+    "shard-zip",
+    "lossless",
+    "cli",
+    "open-source",
+    "apache-2.0"
   ],
-  "author": "Slid Phi Labs",
-  "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://www.slidphilabs.com",
+  "author": "Slid Phi Labs / Corey Tasz",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://github.com/sponsors/ceedot-rock"
+    },
+    {
+      "type": "individual",
+      "url": "https://www.slidphilabs.com"
+    }
+  ],
+  "homepage": "https://github.com/ceedot-rock/shard-zip",
+  "bugs": {
+    "url": "https://github.com/ceedot-rock/shard-zip/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ceedot-rock/shard-zip.git"
   },
-  "funding": {
-    "type": "individual",
-    "url": "https://www.slidphilabs.com/api/agent"
+  "engines": {
+    "node": ">=18"
   },
-  "agentic": {
-    "modules": {
-      "compression": [
-        "SPL Codec",
-        "CDDG:Split"
-      ],
-      "agent_platform": [
-        "CuNi",
-        "Agent^Rider",
-        "Quikgater"
-      ]
-    },
-    "commerce": "x402",
-    "discovery": "https://www.slidphilabs.com/api/agent",
-    "catalog": "https://www.slidphilabs.com/api/x402-products",
-    "web_codec": "https://www.slidphilabs.com/api/web-codec",
-    "site": "https://www.slidphilabs.com",
-    "llms_txt": "https://www.slidphilabs.com/llms.txt",
-    "agents_json": "https://www.slidphilabs.com/agents.json",
-    "one_liner": "Free first 1 GB suite · then from $2 min · ~3¢/GB. GET https://www.slidphilabs.com/api/agent. Try Gate retired.",
-    "agent_platform": {
-      "cuni": "https://cuni-studio.fly.dev/",
-      "agent_rider": "https://agentrider.vercel.app/",
-      "quikgater": "https://github.com/ceedot-rock/quikgater"
-    },
-    "suite": "https://www.slidphilabs.com/pps",
-    "suite_pricing": {
-      "free_cap_gb": 1,
-      "min_paid_usd": 2,
-      "usd_per_gb_after_free": 0.03,
-      "usd_per_gb_bulk": 0.02,
-      "try_gate": "retired",
-      "model": "freemium_suite_v3_money"
-    },
-    "welcome": "https://www.slidphilabs.com/api/welcome",
-    "platform_json": "https://www.slidphilabs.com/platform.json"
-  },
-  "x402": {
-    "discovery": "https://www.slidphilabs.com/api/agent",
-    "catalog": "https://www.slidphilabs.com/api/x402-products",
-    "networks": [
-      "solana-mainnet-beta",
-      "eip155:8453"
-    ],
-    "payment_header": "X-PAYMENT"
-  },
-  "bugs": {
-    "url": "https://www.slidphilabs.com"
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "examples"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
   }
 }

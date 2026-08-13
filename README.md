@@ -1,38 +1,21 @@
-# shard-zip (public stub)
+# shard-zip
 
+**Apache-2.0** · pure-JS adaptive compressor (Fibonacci self-sync + Blackjack V2 variants).
 
-<p align="center">
-  <img src="./brand/slid-phi-labs-master.jpg" alt="Zero Range Wave · Slid Phi Labs" width="720"/>
-</p>
+## Install
 
-<p align="center"><strong>Slid Phi Labs</strong> — official product branding</p>
-
-<p align="center"><img src="https://raw.githubusercontent.com/ceedot-rock/splabs-brand/main/assets/brand/logos/logo-shard-zip.jpg" alt="product logo" width="280"/></p>
-
-
-**Proprietary.** Public npm does **not** include codec source.
-
-## Get the real package
-
-1. [Try Gate](https://www.slidphilabs.com/try) or purchase
-2. [Access instructions](https://www.slidphilabs.com/access)
-
-© Slid Phi Labs · All rights reserved
-
-## Agentic commerce
-
-Agents can buy / quote lab products via **x402** (USDC on Solana mainnet or Base mainnet).
-
-```
-Agent commerce: GET https://www.slidphilabs.com/api/agent then pay via x402 on Solana or Base mainnet (X-PAYMENT) on catalog POST.
+```bash
+npm install shard-zip
 ```
 
-| Surface | URL |
-|---------|-----|
-| Discovery | https://www.slidphilabs.com/api/agent |
-| Catalog | https://www.slidphilabs.com/api/x402-products |
-| agents.txt | https://www.slidphilabs.com/agents.txt |
-| agents.json | https://www.slidphilabs.com/agents.json |
-| llms.txt | https://www.slidphilabs.com/llms.txt |
+## License & credit
 
-Humans: [www.slidphilabs.com](https://www.slidphilabs.com) (Stripe).
+Apache License 2.0 — free commercial use; keep copyright and `NOTICE` attribution.
+
+© 2026 Slid Phi Labs / Corey Tasz
+
+## Support / funding
+
+Free library. Paid support and the separate commercial product line: [slidphilabs.com](https://www.slidphilabs.com).
+
+> **Scope:** Historical open-source compressor. Not the current SPL Codec / private production stack.
