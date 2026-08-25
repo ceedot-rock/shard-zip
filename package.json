@@ -39,9 +39,17 @@
     {
       "type": "individual",
       "url": "https://www.slidphilabs.com"
+    },
+    {
+      "type": "individual",
+      "url": "https://buy.stripe.com/3cI7sMd7D8hq1GZaoE6wE0i"
+    },
+    {
+      "type": "individual",
+      "url": "https://www.slidphilabs.com/pay?sku=shard-zip"
     }
   ],
-  "homepage": "https://github.com/ceedot-rock/shard-zip",
+  "homepage": "https://www.slidphilabs.com/npm#shard-zip",
   "bugs": {
     "url": "https://github.com/ceedot-rock/shard-zip/issues"
   },
@@ -62,5 +70,15 @@
   "type": "module",
   "exports": {
     ".": "./dist/index.js"
+  },
+  "agentic": {
+    "name": "Slid Phi Labs",
+    "sku": "shard-zip",
+    "human": "https://buy.stripe.com/3cI7sMd7D8hq1GZaoE6wE0i",
+    "pay": "https://www.slidphilabs.com/pay?sku=shard-zip",
+    "x402": "https://www.slidphilabs.com/api/x402-products?sku=shard-zip",
+    "pricing": "https://www.slidphilabs.com/pricing.json",
+    "usd": 199,
+    "note": "Support for the public OSS library. Not a secret engine. Not Chamber Year."
   }
 }
