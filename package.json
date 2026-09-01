@@ -1,7 +1,7 @@
 {
   "name": "shard-zip",
-  "version": "0.4.0",
-  "description": "Omnipresent pure-JS compressor \u2014 Fibonacci self-sync + Blackjack V2 adaptive variants, K-division, raw fallback. CLI. Open source.",
+  "version": "0.4.1",
+  "description": "Omnipresent pure-JS compressor — Fibonacci self-sync + Blackjack V2 adaptive variants, K-division, raw fallback. CLI. Open source.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -23,10 +23,10 @@
     "lossless",
     "cli",
     "open-source",
-    "apache-2.0"
+    "gpl-3.0"
   ],
   "author": "Slid Phi Labs / Corey Tasz",
-  "license": "Apache-2.0",
+  "license": "GPL-3.0-only",
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.4.0"
