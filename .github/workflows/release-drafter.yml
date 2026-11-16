@@ -1,0 +1,33 @@
+name: release-drafter
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+      - unlabeled
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-drafter-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  draft:
+    name: draft release notes
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: release-drafter/release-drafter@67e173cadb2fbd3de94f4a861e0c48c913b462ae # v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

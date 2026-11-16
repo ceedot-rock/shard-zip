@@ -1,0 +1,23 @@
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+categories:
+  - title: "Features"
+    labels:
+      - feat
+      - feature
+  - title: "Bug fixes"
+    labels:
+      - fix
+      - bugfix
+      - bug
+  - title: "Maintenance"
+    labels:
+      - chore
+      - deps
+      - ci
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: "\\<*_&"
+template: |
+  ## Changes
+
+  $CHANGES
