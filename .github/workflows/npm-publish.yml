@@ -21,8 +21,34 @@ jobs:
         with:
           node-version: "20"
           registry-url: "https://registry.npmjs.org"
-      - run: npm ci || npm install
+      # No package-lock.json is committed, so `npm ci` can never succeed;
+      # install directly instead of failing through the fallback every run.
+      - run: npm install
+      # Rebuild dist/ from src so a tag can never publish a stale build.
+      - run: npm run build --if-present
       - run: npm test --if-present
+      # Skip re-publishing a version that already exists: re-pushing a tag
+      # otherwise fails the run (403, "cannot publish over the previously
+      # published versions"). v0.4.0 failed exactly this way (run 32864600434).
+      - name: check if this version is already published
+        id: published
+        run: |
+          PKG=$(node -p "require('./package.json').name")
+          VER=$(node -p "require('./package.json').version")
+          if npm view "$PKG@$VER" version >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "$PKG@$VER is already on the registry; skipping publish."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+      # Fail fast with a clear message when NPM_TOKEN is missing/invalid
+      # instead of a cryptic 404 on PUT (v0.4.1, run 33994076867).
+      - name: verify npm auth
+        if: steps.published.outputs.exists != 'true'
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm publish --access public
+        if: steps.published.outputs.exists != 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
