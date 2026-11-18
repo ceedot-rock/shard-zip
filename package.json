@@ -67,7 +67,7 @@
     "NOTICE",
     "examples"
   ],
-  "type": "module",
+  "type": "commonjs",
   "exports": {
     ".": "./dist/index.js"
   },

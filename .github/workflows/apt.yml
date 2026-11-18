@@ -1,0 +1,40 @@
+# Builds the slidphi-shard-zip .deb on version tags. Publishing the APT repo
+# itself (publish-repo.sh + GPG key) stays a maintainer action; see apt/README.
+name: apt-deb
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+concurrency:
+  group: apt-deb
+  cancel-in-progress: false
+
+jobs:
+  deb:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "20"
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: ./apt/build-deb.sh ./dist-deb
+      - name: smoke-test installed deb
+        run: |
+          sudo dpkg -i ./dist-deb/slidphi-shard-zip_*_all.deb
+          echo '[1,2,3,2,1]' > /tmp/t.json
+          shard-zip compress /tmp/t.json -o /tmp/t.shrd
+          shard-zip decompress /tmp/t.shrd -o /tmp/t.out.json
+          grep -q '\[1,2,3,2,1\]' /tmp/t.out.json
+      - uses: actions/upload-artifact@65c4c4a6d2b378c43a86f8c8f279a15e1e39b4657 # v4
+        with:
+          name: slidphi-shard-zip-deb
+          path: dist-deb/*.deb
